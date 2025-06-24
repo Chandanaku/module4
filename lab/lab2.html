@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: antiquewhite;
+        }
+        .rndrls{
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            margin-top: 250px;
+            border:1px black solid;
+            padding:50px;
+            background-color: rgb(57, 71, 71);
+            color: white;
+        }
+        #input{
+            width:auto;
+            height: 75px;
+        }
+        #additem{
+            background-color: rgb(69, 69, 245);
+            border-radius: 50px;
+            border: 1px white solid;
+            color:white;
+        }
+        #removelasitem{
+            background-color: rgb(69, 69, 245);
+            border-radius: 50px;
+            border: 1px white solid;
+            color:white;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="rndrls">
+      <input type="text" id="input" placeholder="Enter item to add" />
+     <div class="bnn">
+        <button id="additem""><span>
+            +
+        </span></button>
+        <button id="removelasitem" ><span>- ↑</span></button>
+     </div>
+      <ul id="displayItems"></ul>
+    </div>
+    <script src="lab2.js"></script>
+  </body>
+</html>
