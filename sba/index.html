@@ -1,67 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task Manager</title>
-    <style>
-      body {
-        font-family: Arial;
-        padding: 20px;
-        max-width: 600px;
-        margin: auto;
-      }
-      input,
-      select,
-      button {
-        margin: 5px 0;
-        padding: 8px;
-        width: 100%;
-      }
-      ul {
-        list-style: none;
-        padding: 0;
-      }
-      li {
-        border: 1px solid #ccc;
-        padding: 10px;
-        margin-bottom: 5px;
-      }
-      .completed {
-        background-color: #d4edda;
-      }
-      .overdue {
-        background-color: #f8d7da;
-      }
-    </style>
+    <title>To-Do App!</title>
+    <link rel="stylesheet" href="styles.css" />
+    
   </head>
   <body>
-    <h2>Task Manager</h2>
+      <h1 class="title">Create your To-Do List </h1>
+      <p id="currentTime"></p>
+      <div class="taskapp container">
+        <input type="text" name="taskName" id="taskName" value="" placeholder="Task Name"/>
+        <input type="text" name="category" id="category" value="" placeholder="Category"/>
+        <input type="text" name="description" id="description" value="" placeholder="Description" />
+        <input type="date" name="deadline" id="duedt" value="" placeholder="Duedate"/>
+        
+        
+        <form class="drp" >
+            <label for="status" ></label>
+            <select id="status">
+                <option value="">Select status</option>
+                <option value="Not Started">Not Started</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+                <option value="Over Due">Over Due</option>
+            </select> 
+        </form>
 
-    <input type="text" id="taskName" placeholder="Task Name" />
-    <input type="text" id="category" placeholder="Category" />
-    <input type="date" id="deadline" />
-    <select id="status">
-      <option value="Pending">Pending</option>
-      <option value="Completed">Completed</option>
-    </select>
-    <button id="addTask">Add Task</button>
-
-    <h3>Filter Tasks</h3>
-    <select id="filterStatus">
-      <option value="All">All</option>
-      <option value="Pending">Pending</option>
-      <option value="Completed">Completed</option>
-      <option value="Overdue">Overdue</option>
-    </select>
-
-    <select id="filterCategory">
-      <option value="All">All</option>
-    </select>
-
-    <h3>Task List</h3>
-    <ul id="taskList"></ul>
-
-    <script src="script.js"></script>
+        <button type="button"id="filter"><img src="https://www.freeiconspng.com/uploads/filter-icon-6.png"></button>
+      </div>
+      <hr>
+      <br></br>
+      <div class="lol">
+      <div class="tble" >
+        <table id='tm'>
+          <thead>
+            <tr>
+              <th id="a1"> Name</th>
+              <th id="a2"> Category</th>
+              <th id="a3"> Description</th>
+              <th id="a4"> Status</th>
+              <th>Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+        </div>
+        <div cls='bns'><button id="add" type="submit">ADD Task</button>
+      </div>
+      <script src="script.js"></script>
   </body>
 </html>
